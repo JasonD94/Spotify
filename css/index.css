@@ -28,7 +28,10 @@
       https://developer.spotify.com/technologies/widgets/adding-widgets-to-websites/
       http://embedresponsively.com/
       https://jsfiddle.net/JMPerez/qa73L/
+
+      I added 15px of padding, to give some space between widgets.
  */
+
 .spotify-center {
   position: relative;
   padding-bottom: 56.25%;
@@ -40,6 +43,7 @@
   .spotify-center iframe,
   .spotify-center object,
   .spotify-center embed {
+    padding: 15px;
     position: absolute;
     top: 0;
     left: 0;
