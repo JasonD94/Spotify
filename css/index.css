@@ -29,7 +29,11 @@
       http://embedresponsively.com/
       https://jsfiddle.net/JMPerez/qa73L/
 
-      I added 15px of padding, to give some space between widgets.
+      To prevent massive spaces on small screens (like mobile devices), I used "height: 80vh" instead of
+      "height: 100%" for the height of the iframes. See these links for details:
+
+      https://stackoverflow.com/questions/29730977/how-do-i-set-the-height-of-an-iframe-with-the-min-height-property-in-the-body
+      http://generatedcontent.org/post/21279324555/viewportunits
  */
 
 .spotify-center {
@@ -43,12 +47,12 @@
   .spotify-center iframe,
   .spotify-center object,
   .spotify-center embed {
-    padding: 15px;
+    padding: 15px;          /* Adding space between widgets */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 80vh;           /* Forcing a min height so the small widget player will not appear */
   }
 
 /*  For the GitHub Section link
