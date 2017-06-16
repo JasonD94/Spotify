@@ -21,14 +21,35 @@
       Since the iframe Spotify playlists weren't being centered, I found some CSS that will make them centered:
       https://stackoverflow.com/questions/8366957/how-to-center-an-iframe-horizontally
 
-      Turns out you really just need to use text-align: center, or make it display: block;
+      Turns out you really just need to use text-align: center, or make it display: block; I also added some padding
+      to the bottom for when the screen size gets smaller.
 
-      I also added some padding to the bottom for when the screen size gets smaller.
+      I am also testing out making the iframes fluid / responsive using these links:
+      https://developer.spotify.com/technologies/widgets/adding-widgets-to-websites/
+      http://embedresponsively.com/
+      https://jsfiddle.net/JMPerez/qa73L/
+
+      I added 15px of padding, to give some space between widgets.
  */
+
 .spotify-center {
-  padding-bottom: 20px;
-  text-align: center;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
+  .spotify-center iframe,
+  .spotify-center object,
+  .spotify-center embed {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 
 /*  For the GitHub Section link
     These styles make the GitHub Section header appear white all the time,
