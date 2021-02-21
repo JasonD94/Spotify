@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	
   <!--
     File: index.html
     Jason Downing
@@ -22,15 +23,15 @@
   <!-- Custom Title Bar -->
   <title>Spotify Playlists</title>
 
-	<!-- 2/20/2021: Updated to the latest Start Bootstrap code, so now pulling these in like they do
-								One exception: using my font awesome, was missing font awesome icons with the Start Bootstrap one...
-	--->
+  <!-- 2/20/2021: Updated to the latest Start Bootstrap code, so now pulling these in like they do
+                  One exception: using my font awesome, was missing font awesome icons with the Start Bootstrap one...
+  --->
   <script src="https://use.fontawesome.com/4dfd1d7bab.js"></script>
-	<!-- Google fonts-->
-	<link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-	<!-- Third party plugin CSS-->
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+  <!-- Third party plugin CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
 
   <!-- Theme CSS -->
   <link href="css/creative.css" rel="stylesheet">
@@ -92,10 +93,12 @@
     <div class="container my-auto header-content-pos">
       <div class="row">
         <div class="col-lg-10 mx-auto">
-          <h1 class="text-uppercase text-black">Spotify Playlists</h1>
+          <h1 class="text-uppercase text-black">
+            <strong>Spotify Playlists</strong>
+          </h1>
         <hr class="divider my-4" />
-        <p>A few Spotify playlists I like.
-          <a class="text-white" href="https://open.spotify.com/user/22jfi7je7rejouxfhnqiqyd3a">
+        <p class="text-black font-weight-bold">A few Spotify playlists I like.
+        <a class="text-white" href="https://open.spotify.com/user/22jfi7je7rejouxfhnqiqyd3a">
             You can find my Spotify profile here.</a>
         </p>
         <a class="btn btn-primary btn-xl js-scroll-trigger" href="#spotify" >Play Some Music!</a>
@@ -117,9 +120,10 @@
       <!-- Info about these widgets -->
       <div class="row">
         <div class="col-lg-12 text-center">
-          <p> These playlist widgets will link to the Spotify Player. You will need a Spotify account to listen
-              to more than 30 seconds of music, and the widget should prompt you to sign up after the 30 seconds
-              is up. You can find more of my
+          <p> These playlist widgets will link to the Spotify Player. 
+              You will need a Spotify account to listen
+              to more than 30 seconds of music, and the widget should prompt 
+              you to sign up after the 30 seconds is up. You can find more of my
               <a class="text-white" href="https://open.spotify.com/user/22jfi7je7rejouxfhnqiqyd3a">Spotify Playlists here.</a>
           </p>
         </div>
@@ -132,38 +136,36 @@
             Small screens:  1 2
                             3 4
             Phones: each one on its own line
-      -->
+       -->
       <div class="row">
+
+        <!-- Classic Rock Playlist - apparently 4,000 people like this one. Holy shit... -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 spotify-center">
+					<iframe src="https://open.spotify.com/embed/playlist/4lIywN6kXl9KPm3OQ8u8G7" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+
+        <!-- Country Radio - second most popular with over 1,000 followers! No idea why. -->
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 spotify-center">
+					<iframe src="https://open.spotify.com/embed/playlist/0hAzY6oELGcTZ0eLlSnm8p" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
 
         <!-- Fallout Radio - most popular with ~80 followers -->
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 spotify-center">
-          <iframe src="https://open.spotify.com/embed?uri=spotify:user:22jfi7je7rejouxfhnqiqyd3a:playlist:4IwBsiURuJdXIhCZhYDFvq"
-                  frameborder="0" allowtransparency="true"></iframe>
+					<iframe src="https://open.spotify.com/embed/playlist/4IwBsiURuJdXIhCZhYDFvq" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
 
-        <!-- Country Radio - second most popular, ~11 followers -->
+        <!-- Skiing Playlist - one of my favorites. But only 4 followers hahaha -->
         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 spotify-center">
-          <iframe src="https://open.spotify.com/embed?uri=spotify:user:22jfi7je7rejouxfhnqiqyd3a:playlist:0hAzY6oELGcTZ0eLlSnm8p"
-                  frameborder="0" allowtransparency="true"></iframe>
+					<iframe src="https://open.spotify.com/embed/playlist/1tHBJsDvIitHjaLNoLkREX" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
         </div>
 
-        <!-- Skiing Playlist - personal favorite -->
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 spotify-center">
-          <iframe src="https://open.spotify.com/embed?uri=spotify:user:22jfi7je7rejouxfhnqiqyd3a:playlist:1tHBJsDvIitHjaLNoLkREX"
-                  frameborder="0" allowtransparency="true"></iframe>
-        </div>
-
-        <!-- Classic Rock Playlist - also great -->
-        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 spotify-center">
-          <iframe src="https://open.spotify.com/embed?uri=spotify:user:22jfi7je7rejouxfhnqiqyd3a:playlist:4lIywN6kXl9KPm3OQ8u8G7"
-                  frameborder="0" allowtransparency="true"></iframe>
-        </div>
-
+				<!-- Time to add more playlists, because why not? -->
+				
       </div>
     </div>
   </section>
 
-	<!-- Contact section -->
+  <!-- Contact section -->
   <section class="min-padding" id="contact">
     <div class="container">
     
@@ -181,10 +183,10 @@
           <!-- Really avoiding spam by sending emails to the spam box
                Docs URL: https://formspree.io/ 
                Also, Bootstrap forms: https://getbootstrap.com/docs/3.3/css/#forms -->
-	        <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-							!!!!!!!     CHANGE THE FORMSPREE ENDPOINT TO YOUR OWN EMAIL IF YOU FORK THIS REPO. MUCH THANKS     !!!!!!!          
-							!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-					-->
+          <!--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+              !!!!!!!     CHANGE THE FORMSPREE ENDPOINT TO YOUR OWN EMAIL IF YOU FORK THIS REPO. MUCH THANKS     !!!!!!!          
+              !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+          -->
           <form action="https://formspree.io/mdopovkv" method="POST" class="form-horizontal" role="form">
             <!-- Need a name, reply to email, and a message -->
             <div class="form-group">
@@ -216,15 +218,15 @@
       <!-- Email, LinkedIn, and GitHub links -->
       <div class="row">
       
-			  <!-- Removed email link, because spam bots just figure it out and I get hit with 10s of thousands of
+        <!-- Removed email link, because spam bots just figure it out and I get hit with 10s of thousands of
               requests a month so... not doing that. If you can read this, just open up my resume ;P      -->
         <div class="col-4 col-sm-4 col-lg-2 offset-lg-3 text-center">
-				  <a href="../img/resume.pdf">
-						<i class="fa fa-envelope fa-4x sr-icons"></i>
-					</a>
-					<a href="../img/resume.pdf">
-						<p>Email - <span class="text-blue text-italic font-weight-bold">see resume</span></p>
-					</a>
+          <a href="../img/resume.pdf">
+            <i class="fa fa-envelope fa-4x sr-icons"></i>
+          </a>
+          <a href="../img/resume.pdf">
+            <p>Email - <span class="text-blue text-italic font-weight-bold">see resume</span></p>
+          </a>
         </div>
         
         <div class="col-4 col-sm-4 col-lg-2 text-center">
@@ -260,27 +262,27 @@
       <a href="http://startbootstrap.com/template-overviews/creative/" class="text-blue">Creative Bootstrap Theme</a>
       by <a href="http://startbootstrap.com/" class="text-blue">Start Bootstrap</a>.
     </p>
-		<br/>
+    <br/>
   </div>
 
   <!-- 2/20/2021: Updated with the latest Start Bootstrap code, so following what they did.
-							  Exception: the slim jquery seems to cause console errors. The full jquery gets rid of that,
-								and it seems like the scrolling works too. Weird.
+                Exception: the slim jquery seems to cause console errors. The full jquery gets rid of that,
+                and it seems like the scrolling works too. Weird.
        https://github.com/BlackrockDigital/startbootstrap-creative  -->
        
  <!-- Bootstrap core JS-->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- Third party plugin JS-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-	<!-- Core theme JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- Core theme JS-->
   <script src="js/creative.js"></script>
-	
-	<!-- Automagically update the copyright year - why did I ever hardcode that? RIP lazy 2015 - 2020 me. -->
-	<script>
-		document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
-	</script>
-	
+  
+  <!-- Automagically update the copyright year - why did I ever hardcode that? RIP lazy 2015 - 2020 me. -->
+  <script>
+    document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
+  </script>
+  
 </body>
 </html>

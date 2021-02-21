@@ -4,46 +4,54 @@
     Contact: jason@downing.io
     MIT Licensed - see http://opensource.org/licenses/MIT for details.
     Anyone may freely use this code. Just don't sue me if it breaks stuff.
-    Created: September 3rd, 2015.
-    Last Updated: Feb 18th, 2021.
+    Created: September 3rd, 2015
+    Last Updated: February 21st, 2021
 
     This file contains CSS classes / IDs used to override the Creative Bootstrap Theme
+		
+		Some of this is used in the jasond94.github.io repo, while some of it is specifically 
+		for the Spotify repository. NOTE: do not remove the CSS for the Spotify playlist stuff,
+		otherwise Playlists won't display nicely and will overlap!
 */
 
-/* For the new header, all text shall be black around the intro section 
-	 Will hopefully be easier to read.
+/*
+    Tweaking the header image for this particular header
 */
-.text-black {
-	color: black;
+#page-top > header {
+  background-position: bottom;
+}
+
+header .header-content-pos {
+	transform: translateY(-90%)
 }
 
 .text-small {
   font-size: 100%;
 }
 
-.text-italic {
-  font-style: italic;
+/* Better colors for the header text */
+.text-header {
+  color: white;
+  text-shadow: 4px 4px 4px #000000;
+}
+/* Niffy trick: https://stackoverflow.com/a/14310180 */
+.text-header span {
+	background-color: black;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
-/* Tweaking text position for the top most section  */
-header .header-content-pos {
-	transform: translateY(-150%)
+.text-header-p {
+  color: white;
+  background-color: black;
 }
 
-/* Changing the Navbar text color to be darker - easier to read on a light background header image. */
+/*  Seeing if I can change the background image opacity
+    https://stackoverflow.com/questions/12605908/change-background-image-opacity
 
-/* Making the "text-muted" class smaller, seems a bit too large. */
-.text-muted {
-  font-size: 97%;
-}
-
-/* Removing the bottom margin in the Languages and Skills area */
-#about > div > div:nth-child(2) > div:nth-child(3) > p.text-faded.no-margin {
-    margin-bottom: 0;
-}
-#about > div > div:nth-child(2) > div:nth-child(4) > p.text-faded.no-margin {
-  margin-bottom: 0;
-}
+    Turns out its easier to just edit the background image in Paint.net / GIMP / Photoshop / etc.
+    For the "Trail 57" Background I just applied a 50% Gaussian Blur in Paint.net
+ */
 
 /*  For the GitHub Section link
     These styles make the GitHub Section header appear white all the time,
@@ -63,10 +71,7 @@ header .header-content-pos {
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-  /* 6/15/2018: Renamed because Bootstrap's CSS ALSO has a text-white class,
-                and my own text-white class was adding a border on the H2 'Education'
-                header text. */
-.text-white-link {
+.text-white {
   color: white;
   border-bottom: 1px solid currentColor;
 }
@@ -76,7 +81,7 @@ a.text-blue:link  {
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-a.text-white-link:link  {
+a.text-white:link  {
   color: white;
   border-bottom: 1px solid currentColor;
 }
@@ -86,7 +91,7 @@ a.text-blue:visited {
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-a.text-white-link:visited {
+a.text-white:visited {
   color: white;
   border-bottom: 1px solid currentColor;
 }
@@ -97,7 +102,7 @@ a.text-blue:hover {
   border-bottom: 1px solid currentColor;
   text-decoration: none;
 }
-a.text-white-link:hover {
+a.text-white:hover {
   color: blue;
   border-bottom: 1px solid currentColor;
   text-decoration: none;
@@ -108,7 +113,7 @@ a.text-blue:active {
   color: blue;
   border-bottom: 1px solid currentColor;
 }
-a.text-white-link:active {
+a.text-white:active {
   color: white;
   border-bottom: 1px solid currentColor;
 }
@@ -139,72 +144,36 @@ a.text-white-link:active {
   padding-bottom: 2em;
 }
 
-/* Adding some background color options */
-.bg-green {
-	/* Spotify Green - hex code from: https://brandpalettes.com/spotify-color-codes/ */
-	background-color: #1DB954 !important;
-}
+/*
+      Since the iframe Spotify playlists weren't being centered, I found some CSS that will make them centered:
+      https://stackoverflow.com/questions/8366957/how-to-center-an-iframe-horizontally
+      Turns out you really just need to use text-align: center, or make it display: block; I also added some padding
+      to the bottom for when the screen size gets smaller.
+      I am also testing out making the iframes fluid / responsive using these links:
+      https://developer.spotify.com/technologies/widgets/adding-widgets-to-websites/
+      http://embedresponsively.com/
+      https://jsfiddle.net/JMPerez/qa73L/
+      To prevent massive spaces on small screens (like mobile devices), I used "height: 80vh" instead of
+      "height: 100%" for the height of the iframes. See these links for details:
+      https://stackoverflow.com/questions/29730977/how-do-i-set-the-height-of-an-iframe-with-the-min-height-property-in-the-body
+      http://generatedcontent.org/post/21279324555/viewportunits
+ */
 
-/* Black button to go with the Spotify Green. The active/focus/etc stuff is for when you
-   hover / click on the button. */
-.btn-black {
-	color: #fff;
-	background-color: #000000 !important;
+.spotify-center {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
 }
-.btn-black:active, .btn-black:focus, .btn-black:hover {
-	color: #fff;
-	background-color: #262626 !important;
-}
-.btn-black:active, .btn-black:focus {
-	box-shadow:0 0 0 .2rem rgba(240,95,64,.5)!important;
-}
-
-/* Black hrefs & hrs too */
-.href-black {
-	color: #000000;
-}
-hr.black {
-	border-color: #000000;
-	color: #000000;
-}
-
-/* 	Vertically center the images on the "Fun Stuff" section
-		https://stackoverflow.com/a/37163431
-*/
-.images-vcenter {
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-/* 	Add border to the images on the "Fun Stuff" section 
-		https://www.w3schools.com/csS/css3_images.asp
-*/
-.images-border {
-	border: .5em solid #000000;
-	border-radius: 3em;
-}
-
-.images-border-skiing {
-	border: .5em solid #000000;
-	border-radius: 50%;
-}
-
-/* 
-		https://stackoverflow.com/a/2711996 
-*/
-.images-size-mtb {
-	width: 70%;
-	height: auto;
-}
-
-.images-size-skiing {
-	width: 90%;
-	height: auto;
-}
-
-/* Rtn Red Color */
-.RtnRed {
-	color: #E61231 !important;
-	font-weight: bold;
+.spotify-center iframe,
+.spotify-center object,
+.spotify-center embed {
+	padding: 15px;          /* Adding space between widgets */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80vh;           /* Forcing a min height so the small widget player will not appear */
 }
